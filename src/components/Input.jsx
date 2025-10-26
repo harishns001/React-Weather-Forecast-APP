@@ -1,8 +1,12 @@
 import React from "react";
+import { useWeather } from "../context/Weather";
 
-const Input = (props) => {
+const Input = () => {
+    const Weather = useWeather();
+    console.log("Weather", Weather);
+    
     return (
-        <input className="input-field" placeholder={PaymentResponse.placeholder} value={props.value} onChange={props.onChange} />
+        <input className="input-field"  value={Weather.searchCity} onChange={(e) => Weather.setSearchCity(e.target.value)} />
     )
 }
 
