@@ -6,7 +6,7 @@ const Input = () => {
     console.log("Weather", Weather);
     
     return (
-        <input className="input-field"  value={Weather.searchCity} onChange={(e) => Weather.setSearchCity(e.target.value)} />
+        <input className="input-field" placeholder="#Search here!" value={Weather.searchCity} onChange={(e) => Weather.setSearchCity(e.target.value)} />
     )
 }
 
